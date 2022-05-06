@@ -2,7 +2,13 @@ export function replaceNullish<T extends object, K>(
   obj: T,
   replacer: K,
   deep?: boolean,
-): { [P in keyof T]: NonNullable<T[P]> & K } {
+): {
+  [P in keyof T]: null extends T[P]
+    ? NonNullable<T[P]> | K
+    : undefined extends T[P]
+    ? NonNullable<T[P]> | K
+    : NonNullable<T[P]>;
+} {
   return Object.entries(obj).reduce((acc, [key, value]) => {
     if (deep) {
       if (Array.isArray(value)) {
@@ -19,5 +25,5 @@ export function replaceNullish<T extends object, K>(
     }
 
     return acc;
-  }, {} as { [P in keyof T]: NonNullable<T[P]> & K });
+  }, {} as any);
 }
