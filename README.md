@@ -46,3 +46,27 @@ omit({
 }, 'name', 'price');
 // => { symbol: 'BTC' }
 ```
+
+### Object: Replace Nullish
+
+Creates an object with same properties but all `null` and `undefined` values are replaced by the given value. If `deep` enabled, works recursively (including arrays).
+
+```ts
+// deep: false (default)
+replaceNullish({
+  key: 'value',
+  _null: null,
+  _undefined: undefined,
+}, 'any_custom_value');
+// => { key: 'value', _null: 'any_custom_value', _undefined: 'any_custom_value' }
+
+// deep: true
+replaceNullish({
+  key: 'value',
+  nested: {
+    _null: null,
+    _undefined: undefined,
+  },
+}, 'any_custom_value', true);
+// => { key: 'value', nested: { _null: 'any_custom_value', _undefined: 'any_custom_value' } }
+```
