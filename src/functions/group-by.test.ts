@@ -12,8 +12,8 @@ describe('functions/groupBy', () => {
 
   it('GIVEN valid key THEN success', () => {
     expect(groupBy(array, 'symbol')).eql({
-      [array[0].symbol]: [array[0], array[3]],
-      [array[1].symbol]: [array[1], array[2]],
+      [array[0].symbol!]: [array[0], array[3]],
+      [array[1].symbol!]: [array[1], array[2]],
     });
   });
 
