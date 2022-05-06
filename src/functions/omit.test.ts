@@ -26,4 +26,8 @@ describe('functions/omit', () => {
   it('GIVEN nonexistent key THEN success', () => {
     expect(omit(object, 'unknown' as any)).eql(object);
   });
+
+  it('GIVEN no keys THEN success', () => {
+    expect(omit(object)).eql(object);
+  });
 });
