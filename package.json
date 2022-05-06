@@ -14,7 +14,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
-    "@dustfoundation/eslint-config": "^2.3.0",
+    "@dustfoundation/eslint-config": "^2.3.1",
     "@dustfoundation/prettier-config": "^2.3.0",
     "@dustfoundation/ts-config": "^2.3.0",
     "@types/chai": "^4.3.1",
