@@ -1,5 +1,9 @@
 # @dustfoundation/utils
 
+![CI](https://github.com/DustFoundation/utils/actions/workflows/ci.yml/badge.svg)
+[![NPM Version](https://badgen.net/npm/v/@dustfoundation/utils)](https://npmjs.com/package/@dustfoundation/utils)
+[![Minimum Node.js Version](https://badgen.net/npm/node/@dustfoundation/utils)](https://npmjs.com/package/@dustfoundation/utils)
+
 Shared **Utils** for Dust Foundation projects.
 
 ## Installation
