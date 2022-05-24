@@ -1,6 +1,6 @@
 {
   "name": "@dustfoundation/utils",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Shared Utils for Dust Foundation projects",
   "repository": "https://github.com/DustFoundation/utils",
   "main": "dist/index.js",
