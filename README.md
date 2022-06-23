@@ -14,6 +14,23 @@ npm install --save @dustfoundation/utils
 
 ## Features
 
+### Util: Build Domain
+
+Builds custom domain for `dust.foundation`. Acceptable stages: `dev`, `stage`, `prod`.
+
+```ts
+buildDomain('dev');
+// => https://dev.dust.foundation
+buildDomain('prod');
+// => https://dust.foundation
+buildDomain('dev', 'content');
+// => https://content.dev.dust.foundation
+buildDomain('dev', 'content', 'ws://');
+// => ws://content.dev.dust.foundation
+buildDomain('###');
+// => throws Error
+```
+
 ### Array: Chunk
 
 Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements. If chunk size is 0, throws error.
