@@ -14,19 +14,6 @@ npm install --save @dustfoundation/utils
 
 ## Features
 
-### Util: Stream To Buffer
-
-Transforms stream into a buffer.
-
-```ts
-const stream = createReadStream(__filename);
-const buffer = await streamToBuffer(stream);
-buffer.toString('utf8');
-// => String utf8
-buffer.toString('base64');
-// => String base64
-```
-
 ### Util: Build Domain
 
 Builds custom domain for `dust.foundation`. Acceptable stages: `dev`, `stage`, `prod`.
